@@ -13,11 +13,19 @@ const createClassedCell = (cellClass) => {
 	return cell;
 }
 
-const activation = (target, classToToggle) => {
+const toggleClassOnClick = (target, classToToggle) => {
 	target.addEventListener('click', function () {
 		target.classList.toggle(classToToggle);
 	});
 }
+/* 
+const toggleClass = (target, classToToggle) => {
+	if (target.classList.contains(classToToggle)) {
+		target.classList.remove(classToToggle);
+	} else if (!(target.classList.contains(classToToggle))) {
+		target.classList.add(classToToggle);
+	}
+} */
 
 //# Program
 
@@ -39,7 +47,11 @@ const classThree = 'cell-three';
 
 const classActive = 'active';
 
+const classRemove = 'remove';
+
 const grid = document.getElementById('grid');
+
+const spotlight = document.getElementById('spotlight');
 
 const start = document.getElementById('start');
 
@@ -55,21 +67,24 @@ start.addEventListener('click', function () {
 			const cell = createClassedCell(classOne);
 			grid.appendChild(cell);
 			cell.innerText = i + 1;
-			activation(cell, classActive);
+			toggleClassOnClick(cell, classActive);
+			toggleClass(spotlight, classRemove);
 		}
 	} else if (difficulty === 2) {
 		for (i = 0; i < totalTwo; i++) {
 			const cell = createClassedCell(classTwo);
 			grid.appendChild(cell);
 			cell.innerText = i + 1;
-			activation(cell, classActive);
+			toggleClassOnClick(cell, classActive);
+			toggleClass(spotlight, classRemove);
 		}
 	} else if (difficulty === 3) {
 		for (i = 0; i < totalThree; i++) {
 			const cell = createClassedCell(classThree);
 			grid.appendChild(cell);
 			cell.innerText = i + 1;
-			activation(cell, classActive);
+			toggleClassOnClick(cell, classActive);
+			toggleClass(spotlight, classRemove);
 		}
 	} else {
 		alert('Please, choose a difficulty.');
