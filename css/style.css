@@ -50,26 +50,31 @@ header select {
 	margin: 40px auto;
 	width: 600px;
 	height: 600px;
-	border: 2px dashed white;
 	display: flex;
 	flex-wrap: wrap;
-	/* justify-content: center; */
 }
 
 #grid .cell-one {
 	border: 1px solid white;
 	width: calc(100% / 10);
 	height: calc(100% / 10);
+	cursor: pointer;
 }
 
 #grid .cell-two {
 	border: 1px solid white;
 	width: calc(100% / 9);
 	height: calc(100% / 9);
+	cursor: pointer;
 }
 
 #grid .cell-three {
 	border: 1px solid white;
 	width: calc(100% / 7);
 	height: calc(100% / 7);
+	cursor: pointer;
+}
+
+.active {
+	background-color: green;
 }
