@@ -28,17 +28,19 @@ const totalTwo = cellsTwo * rowsTwo;
 const totalThree = cellsThree * rowsThree;
 
 const classOne = 'cell-one';
-const classTwo = 'cell-Two';
-const classThree = 'cell-Three';
+const classTwo = 'cell-two';
+const classThree = 'cell-three';
 
 const grid = document.getElementById('grid');
 
-const difficulty = parseInt(document.getElementById('difficulty').value);
-console.log('Difficulty chosen: ' + difficulty);
-
 const start = document.getElementById('start');
 
+const reset = document.getElementById('reset');
+
 start.addEventListener('click', function () {
+
+	const difficulty = parseInt(document.getElementById('difficulty').value);
+	console.log('Difficulty chosen: ' + difficulty);
 
 	if (difficulty === 1) {
 		for (i = 0; i < totalOne; i++) {
@@ -61,4 +63,8 @@ start.addEventListener('click', function () {
 	} else {
 		alert('Please, choose a difficulty.');
 	}
-})
+});
+
+reset.addEventListener('click', function () {
+	location.reload();
+});

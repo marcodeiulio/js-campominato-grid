@@ -34,9 +34,16 @@ header select {
 }
 
 #start {
-	margin: 40px auto;
+	margin: 0 auto;
+	margin-top: 40px;
 	display: block;
 	padding: 10px 30px;
+}
+
+#reset {
+	margin: 20px auto;
+	display: block;
+	padding: 10px 10px;
 }
 
 #grid {
