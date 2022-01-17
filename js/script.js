@@ -14,6 +14,7 @@ const createClassedCell = (cellClass) => {
 }
 
 //# Program
+
 const cellsOne = 10;
 const cellsTwo = 9;
 const cellsThree = 7;
@@ -32,8 +33,32 @@ const classThree = 'cell-Three';
 
 const grid = document.getElementById('grid');
 
-for (i = 0; i < totalOne; i++) {
-	const cell = createClassedCell(classOne);
-	grid.appendChild(cell);
-	cell.innerText = i + 1;
-}
+const difficulty = parseInt(document.getElementById('difficulty').value);
+console.log('Difficulty chosen: ' + difficulty);
+
+const start = document.getElementById('start');
+
+start.addEventListener('click', function () {
+
+	if (difficulty === 1) {
+		for (i = 0; i < totalOne; i++) {
+			const cell = createClassedCell(classOne);
+			grid.appendChild(cell);
+			cell.innerText = i + 1;
+		}
+	} else if (difficulty === 2) {
+		for (i = 0; i < totalTwo; i++) {
+			const cell = createClassedCell(classTwo);
+			grid.appendChild(cell);
+			cell.innerText = i + 1;
+		}
+	} else if (difficulty === 3) {
+		for (i = 0; i < totalThree; i++) {
+			const cell = createClassedCell(classThree);
+			grid.appendChild(cell);
+			cell.innerText = i + 1;
+		}
+	} else {
+		alert('Please, choose a difficulty.');
+	}
+})

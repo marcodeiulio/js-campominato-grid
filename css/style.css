@@ -33,6 +33,12 @@ header select {
 	margin: 0 auto;
 }
 
+#start {
+	margin: 40px auto;
+	display: block;
+	padding: 10px 30px;
+}
+
 #grid {
 	margin: 40px auto;
 	width: 600px;
