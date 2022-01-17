@@ -48,3 +48,15 @@ header select {
 	width: calc(100% / 10);
 	height: calc(100% / 10);
 }
+
+#grid .cell-two {
+	border: 1px solid white;
+	width: calc(100% / 9);
+	height: calc(100% / 9);
+}
+
+#grid .cell-three {
+	border: 1px solid white;
+	width: calc(100% / 7);
+	height: calc(100% / 7);
+}
