@@ -1,3 +1,13 @@
+/*# Utilities */
+.active {
+	background-color: #dddd1d;
+}
+
+.remove {
+	display: none;
+}
+
+/*# Style */
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -96,12 +106,4 @@ button, select {
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
-}
-
-.active {
-	background-color: #dddd1d;
-}
-
-.remove {
-	display: none;
 }
