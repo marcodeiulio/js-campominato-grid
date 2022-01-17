@@ -57,39 +57,39 @@ start.addEventListener('click', function () {
 	console.log('Difficulty chosen: ' + difficulty);
 
 	if (playToggle) {
-		alert('The game will be reset.')
-		location.reload();
-	}
-
-	if (difficulty === 1) {
-		for (i = 0; i < totalOne; i++) {
-			const cell = createClassedCell(classOne);
-			grid.appendChild(cell);
-			cell.innerText = i + 1;
-			playToggle = true;
-			toggleClassOnClick(cell, classActive);
-		}
-	} else if (difficulty === 2) {
-		for (i = 0; i < totalTwo; i++) {
-			const cell = createClassedCell(classTwo);
-			grid.appendChild(cell);
-			cell.innerText = i + 1;
-			playToggle = true;
-			toggleClassOnClick(cell, classActive);
-		}
-	} else if (difficulty === 3) {
-		for (i = 0; i < totalThree; i++) {
-			const cell = createClassedCell(classThree);
-			grid.appendChild(cell);
-			cell.innerText = i + 1;
-			playToggle = true;
-			toggleClassOnClick(cell, classActive);
-		}
+		alert('Please, press the Reset button first.')
 	} else {
-		alert('Please, choose a difficulty.');
+		if (difficulty === 0) {
+			alert('Please, choose a difficulty.');
+		} else {
+			if (difficulty === 1) {
+				for (i = 0; i < totalOne; i++) {
+					const cell = createClassedCell(classOne);
+					grid.appendChild(cell);
+					cell.innerText = i + 1;
+					playToggle = true;
+					toggleClassOnClick(cell, classActive);
+				}
+			} else if (difficulty === 2) {
+				for (i = 0; i < totalTwo; i++) {
+					const cell = createClassedCell(classTwo);
+					grid.appendChild(cell);
+					cell.innerText = i + 1;
+					playToggle = true;
+					toggleClassOnClick(cell, classActive);
+				}
+			} else if (difficulty === 3) {
+				for (i = 0; i < totalThree; i++) {
+					const cell = createClassedCell(classThree);
+					grid.appendChild(cell);
+					cell.innerText = i + 1;
+					playToggle = true;
+					toggleClassOnClick(cell, classActive);
+				}
+			}
+			toggleClass(spotlight, classRemove);
+		}
 	}
-
-	toggleClass(spotlight, classRemove);
 });
 
 reset.addEventListener('click', function () {
